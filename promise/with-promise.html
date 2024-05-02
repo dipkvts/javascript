@@ -1,0 +1,24 @@
+<script>
+  function fun1() {
+    return new Promise(function (resolve, reject) {
+      resolve("from promise");
+      //returning success result, not failure
+    });
+  }
+  function fun2() {
+    console.log("from fun2");
+  }
+
+  fun1().then(
+    //success argument
+    function (myPromise) {
+    //myPromise is value returned from fun1
+      console.log(myPromise);
+    },
+    //failure argument
+    function (myError) {
+      console.log(myError);
+    }
+  );
+  fun2();
+</script>
