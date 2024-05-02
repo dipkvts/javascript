@@ -1,0 +1,20 @@
+<body>
+  <input type="button" value="Get Data" onclick="getData()" />
+  <table id="tab" border="1"></table>
+</body>
+<script>
+  function getData() {
+    fetch("https://restcountries.com/v3.1/all")
+      .then((data) => {
+        return data.json();
+      })
+      .then((countriesList) => {
+        countriesList.forEach((country) => {
+          //document.getElementById("tab").innerHTML = `<tr><td>Hi`
+          //prints just single "Hi"
+          document.getElementById("tab").innerHTML += `<tr><td>Hi`
+          //prints 256 no of "Hi"
+        })
+      })
+  }
+</script>

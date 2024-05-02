@@ -1,0 +1,12 @@
+<body>
+  <input type="text" name="t1" />
+  <input type="button" value="send" onclick="fun()" />
+</body>
+<script>
+  function fun() {
+    fetch("http://localhost:8080/index.html")
+    //U can host this file on ur local tomcat server
+      .then((data) => data.json())
+      .then((dt) => console.log(dt));
+  }
+</script>

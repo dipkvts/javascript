@@ -1,0 +1,19 @@
+<body>
+  <input type="button" value="Get Data" onclick="getData()" />
+  <table id="tab" border="1"></table>
+</body>
+<script>
+  function getData() {
+    fetch("https://restcountries.com/v3.1/all")
+      .then((data) => {
+        return data.json()
+      })
+      .then((countriesList) => {
+        countriesList.forEach((country) => {
+          document.getElementById("tab").innerHTML += 
+            `<tr><td>${country.name.common}<td>${country.population}<td>${country.region}
+              <td><img src='${country.flags.png}' width="100px" />`
+        })
+      })
+  }
+</script>
