@@ -1,0 +1,6 @@
+<script>
+    var p1 = new Promise((resol, reje) => reje("From p1"))
+    var p2 = new Promise((resol, reje) => resol("From p2"))
+    var p3 = new Promise((resol, reje) => resol("From p3"))
+    Promise.any([p1,p2,p3]).then(pro => console.log(pro))
+  </script>
