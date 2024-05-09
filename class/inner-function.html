@@ -1,0 +1,13 @@
+<script>
+  class cls1 {
+    fun1() {
+      alert("from cls1")
+      function fun2() {
+        alert("from inner function")
+      }
+      fun2()
+    }
+  }
+  var obj = new cls1()
+  obj.fun1()
+</script>

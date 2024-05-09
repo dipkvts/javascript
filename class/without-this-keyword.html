@@ -1,0 +1,11 @@
+<script>
+  class cls1 {
+    sno=100
+    fun1() {
+      alert(sno);
+      //compile time error, as "sno" cant be accessed without "this" keyword
+    }
+  }
+  var obj = new cls1();
+  obj.fun1();
+</script>

@@ -1,0 +1,18 @@
+<script>
+  class cls1 {
+    fun1() {
+      alert("from cls1");
+    }
+  }
+  class cls2 extends cls1 {
+    fun1() {
+      alert("from cls2");
+    }
+    fun2() {
+      this.fun1(); //local fxn gets invoked, not derived
+      super.fun1(); //parent fxn gets invoked
+    }
+  }
+  var obj = new cls2();
+  obj.fun2();
+</script>

@@ -1,0 +1,15 @@
+<script>
+  class cls1 {
+    sno=999
+    fun1() {
+      alert("from fun1");
+      function fun2() {
+        alert("from inner function");
+        alert(this.sno) //error: undefined sno
+      }
+      fun2();
+    }
+  }
+  var obj = new cls1();
+  obj.fun1();
+</script>

@@ -1,0 +1,15 @@
+<script>
+  class cls1 {
+    sno = 999;
+    fun1() {
+      alert("from fun1");
+      var fun2 = () => {
+        alert("from inner method fun2");
+        alert(this.sno);
+      };
+      fun2();
+    }
+  }
+  var obj = new cls1();
+  obj.fun1();
+</script>
