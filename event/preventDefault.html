@@ -1,0 +1,12 @@
+<!-- if user presses any numeric value, it display error in alerbox and that entered numeric value will remain invisible in alertbox -->
+<script>
+  function fun(e) {
+    if (e.keyCode < 48 || e.keyCode > 57) {
+      alert("Valid value entered");
+    } else {
+      alert("Invalid value entered. Enter alphabet only");
+      e.preventDefault();
+    }
+  }
+</script>
+<input type="text" onkeydown="fun(event)" />

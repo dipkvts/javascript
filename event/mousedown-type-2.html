@@ -1,0 +1,13 @@
+<!-- If u right click on image n try to save it, it will say copying not allowed -->
+<script>
+  function fun(e) {
+    if(e.button==2) {
+        alert("Image copying is not allowed")
+    }
+  }
+</script>
+<body onmousedown="fun1(event)">
+  <h1>welcome</h1>
+  <br/>
+  <img src="fruits.jpg" width="200px" onmousedown="fun(event)">
+</body>

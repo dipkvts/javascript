@@ -1,0 +1,24 @@
+<div onclick="fun1()">
+  div1
+  <div onclick="fun2()">
+    div2
+    <div onclick="fun3()">div3</div>
+  </div>
+</div>
+<style>
+  div {
+    border: 1px solid blue;
+    padding: 10px; /*Distance brt border*/
+  }
+</style>
+<script>
+  function fun1() {
+    alert("fun1 executing");
+  }
+  function fun2() {
+    alert("fun2 executing");
+  }
+  function fun3() {
+    alert("fun3 executing");
+  }
+</script>

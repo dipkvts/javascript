@@ -1,0 +1,10 @@
+<script>
+  function fun1(e) {
+    document.getElementById("div1").innerText = `X position is ${e.clientX}
+        Y position is ${e.clientY}`
+  }
+</script>
+<body onclick="fun1(event)">
+  welcome
+  <div id="div1"></div>
+</body>

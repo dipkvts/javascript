@@ -1,0 +1,10 @@
+<!-- if user presses any numeric value, display error in alerbox. If alphabat is entered, allow it -->
+<script>
+  function fun(e) {
+    if(e.keyCode < 48 || e.keyCode > 57)
+      alert("valid value entered")
+    else
+      alert("Enter alphabet only")
+  }
+</script>
+<input type="text" onkeydown="fun(event)" />
