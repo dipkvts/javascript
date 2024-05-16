@@ -1,0 +1,31 @@
+<div id="div1">
+    div1
+    <div id="div2">
+      div2
+      <div id="div3">
+        div3
+      </div>
+    </div>
+  </div>
+  <style>
+    div {
+      border: 1px solid blue;
+      padding: 10px;
+      background-color: lightblue;
+    }
+  </style>
+  <script>
+    document.getElementById("div1").addEventListener("click", function(e) { 
+      this.style.backgroundColor="orange"
+      e.stopPropagation()
+    })
+    document.getElementById("div2").addEventListener("click", function(e) {
+      e.stopPropagation()
+      this.style.backgroundColor="white"
+     })
+    document.getElementById("div3").addEventListener("click", function(e) {
+      e.stopPropagation()
+      this.style.backgroundColor="green"
+    })
+  </script>
+   
