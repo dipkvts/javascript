@@ -1,0 +1,25 @@
+<!--As soon as div is clicked upon, it opens up like a slider
+  AND
+As soon as cancel button is clicked, slider window closes down-->
+<div id="myContainer">
+    <img src="cancel.png", width="50px" style="float:right; margin:10px" id="myImgClose" />
+  </div>
+  <style>
+      #myContainer{
+          background-color:yellow;
+          height:300px;
+          width:250px;
+          position:absolute;
+          top:100px;
+          left:-200px
+      }
+  </style>
+  <script>
+      document.getElementById("myContainer").addEventListener("click", function() {
+        this.style.left="0px"
+      })
+      document.getElementById("myImgClose").addEventListener("click", function(e) {
+        document.getElementById("myContainer").style.left="-200px"
+        e.stopPropagation()
+      })
+  </script>
